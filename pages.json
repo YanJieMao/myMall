@@ -1,0 +1,64 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "郝大胖严选"
+			}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/category/category",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/cart/cart",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/userInfo",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "郝大胖严选",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		    "color": "#7A7E83",
+		    "selectedColor": "#ff5c7c",
+		    "borderStyle": "black",
+		    "backgroundColor": "#ffffff",
+		    "list": [{
+		        "pagePath": "pages/index/index",
+		        "iconPath": "static/tabbar/1.jpg",
+		        "selectedIconPath": "static/tabbar/1.jpg",
+		        "text": "首页"
+		    }, {
+		        "pagePath": "pages/category/category",
+		        "iconPath": "static/tabbar/2.jpg",
+		        "selectedIconPath": "static/tabbar/2.jpg",
+		        "text": "分类"
+		    },{
+		        "pagePath": "pages/cart/cart",
+		        "iconPath": "static/tabbar/3.jpg",
+		        "selectedIconPath": "static/tabbar/3.jpg",
+		        "text": "购物车"
+		    },{
+		        "pagePath": "pages/user/user",
+		        "iconPath": "static/tabbar/4.jpg",
+		        "selectedIconPath": "static/tabbar/4.jpg",
+		        "text": "个人中心"
+		    }]
+		}
+
+}
