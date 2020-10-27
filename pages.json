@@ -40,23 +40,23 @@
 		    "backgroundColor": "#ffffff",
 		    "list": [{
 		        "pagePath": "pages/index/index",
-		        "iconPath": "static/tabbar/1.jpg",
-		        "selectedIconPath": "static/tabbar/1.jpg",
+		        "iconPath": "static/tabbar/1.png",
+		        "selectedIconPath": "static/tabbar/1.png",
 		        "text": "首页"
 		    }, {
 		        "pagePath": "pages/category/category",
-		        "iconPath": "static/tabbar/2.jpg",
-		        "selectedIconPath": "static/tabbar/2.jpg",
+		        "iconPath": "static/tabbar/2.png",
+		        "selectedIconPath": "static/tabbar/2.png",
 		        "text": "分类"
 		    },{
 		        "pagePath": "pages/cart/cart",
-		        "iconPath": "static/tabbar/3.jpg",
-		        "selectedIconPath": "static/tabbar/3.jpg",
+		        "iconPath": "static/tabbar/3.png",
+		        "selectedIconPath": "static/tabbar/3.png",
 		        "text": "购物车"
 		    },{
 		        "pagePath": "pages/user/user",
-		        "iconPath": "static/tabbar/4.jpg",
-		        "selectedIconPath": "static/tabbar/4.jpg",
+		        "iconPath": "static/tabbar/4.png",
+		        "selectedIconPath": "static/tabbar/4.png",
 		        "text": "个人中心"
 		    }]
 		}
