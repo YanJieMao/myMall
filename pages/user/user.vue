@@ -25,7 +25,7 @@
 				<text>个人信息</text>			
 			</view>
 			<view class="cu-item" >
-				<view class="cuIcon-repeal text-red" @click="logout()"></view>
+				<view class="cuIcon-exit text-red" @click="logout()"></view>
 				<text>退出</text>			
 			</view>
 		</view>

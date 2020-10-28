@@ -42,48 +42,31 @@
 		},
 		methods: {
 		login:function(){
-			console.log(this.username+"=="+this.password);
-			uni.request({
-			    url: 'http://123.57.7.108:2048/emall/login', //仅为示例，并非真实接口地址。
-			    data: {
-			        username: this.username,
-					password: this.password
-					
-			    },
-				method:"POST",
-			    success: (res) => {
-			        console.log(res.data);
-					if(res.data.code==200){
-						try{
-							uni.setStorageSync('user_id',res.data.data.user.id);
-							uni.setStorageSync('user_name',res.data.data.user.username);
-							uni.setStorageSync('user_token',res.data.data.token);
-							
-							
-							uni.showToast({
-								title:"登陆成功",
-								duration:3000
-							})
-							setTimeout(function(){
-								uni.switchTab({
-									url:"../index/index"
-								})
-								
-							},3000);
-							
-						}
-						catch (e){
-							console.log("登录-存储数据出错")
-						}
-					}
-					else{
-						uni.showToast({
-							title:"登录失败",
-							duration:3000
+			this.$api.__api__login({
+				username:this.username,
+				password:this.password
+			}).then((res)=>{
+				console.log(res)
+				try{
+					uni.setStorageSync('user_id',res.user.id);
+					uni.setStorageSync('user_name',res.user.username);
+					uni.setStorageSync('user_token',res.token);
+					uni.showToast({
+						title:"登录成功",
+						duration:3000
 						})
+						setTimeout(function(){
+						uni.switchTab({
+							url:"../index/index"
+							})
+												
+						},3000);
+											
 					}
-			    }
-			});
+				catch (e){
+					console.log("登录-存储数据出错")
+						}
+			})
 		}
 			
 		}

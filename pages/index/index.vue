@@ -14,10 +14,14 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
+		onLoad:function(){
+			this.init();
 
 		},
 		methods: {
+			init:function(){//初始化页面
+				
+			}
 
 		}
 	}
