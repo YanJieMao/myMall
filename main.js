@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import App from './App'
-
 import api from './api/api.js'
+import global from "./util/global.js"
+Vue.prototype.$global=global;
 Vue.prototype.$api=api;
 
 Vue.config.productionTip = false

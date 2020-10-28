@@ -1,9 +1,14 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view>
+		商品列表
+		<view class="grid col-2 margin-bottom text-center">
+			<view v-for="{item,index} in products" :key="item.id" class="bg-white padding">
+				<image :src="imgServer+item.image"></image>
+				<view>{{item.price}}</view>
+				<view>{{item.name}}</view>
+			</view>
 		</view>
+		
 	</view>
 </template>
 
@@ -11,7 +16,14 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				params:{
+					pageNum:1,
+					pageSize:10,
+					query:""
+				},
+				products:[],
+				imgServer:this.$global.imgServer
+				
 			}
 		},
 		onLoad:function(){
@@ -20,7 +32,12 @@
 		},
 		methods: {
 			init:function(){//初始化页面
-				
+				this.$api.__api__getSkus(this.params)
+					.then((res)=>{
+						console.log(res);
+						this.products=res.list;
+					
+					});
 			}
 
 		}
@@ -28,29 +45,5 @@
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	
 </style>
