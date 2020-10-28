@@ -1,4 +1,4 @@
-<template>
+''<template>
 	<view>
 		<view class="cu-form-group margin-top">
 			<view class="title" >账号</view>
