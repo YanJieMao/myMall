@@ -2,7 +2,7 @@
 	<view>
 		商品列表
 		<view class="grid col-2 margin-bottom text-center">
-			<view v-for="{item,index} in products" :key="item.id" class="bg-white padding">
+			<view v-for="(item,index) in products" :key="item.id" class="bg-white padding">
 				<image :src="imgServer+item.image"></image>
 				<view>{{item.price}}</view>
 				<view>{{item.name}}</view>
@@ -35,6 +35,8 @@
 				this.$api.__api__getSkus(this.params)
 					.then((res)=>{
 						console.log(res);
+						console.log("啦啦啦啦啦");
+						console.log(res.list);
 						this.products=res.list;
 					
 					});
