@@ -7,6 +7,25 @@
 				<image :src="imgServer+item.largeImage" mode="aspectFill"></image>
 			</swiper-item>
 		</swiper>
+		<!-- 选项卡 -->
+		<scroll-view scroll-x class="bg-white nav">
+			<view class="flex text-center">
+				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" 
+				v-for="(item,index) in labels" :key="index" @tap="tabSelect" :data-id="index">
+					{{item}}
+				</view>
+			</view>
+		</scroll-view>
+		<!-- 图文详情 -->
+		<view v-if="TabCur == 0">
+			<image class="myImg" v-for="(item,index) in product.images" :key="index" :src="imgServer+item" mode="aspectFill"></image>
+		</view>
+		<!-- 商品详情 -->
+		<view v-if="TabCur == 1" class="grid col-2 my-label">
+			<view v-for="(item,index) in product.skus[0].attrs" :key="index" :src="imgServer+item" class="solid padding-sm">
+				{{item.name}}:{{item.value}}
+			</view>
+		</view>
 		<!-- 购物车栏 -->
 		<view class="cu-bar bg-white tabbar border shop foot">
 			<button class="action" open-type="contact">
@@ -36,7 +55,10 @@
 		data() {
 			return {
 				product: null, //商品详情信息
-				imgServer: this.$global.imgServer
+				imgServer: this.$global.imgServer,
+				TabCur: 0,//当前选项卡
+				scrollLeft: 0,//偏移量
+				labels:["图文详情","商品介绍","规格详情","商品评价"]
 
 			}
 		},
@@ -53,6 +75,10 @@
 					console.log(res);
 					this.product = res;
 				})
+			},
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
 			}
 
 		}
@@ -60,7 +86,14 @@
 </script>
 
 <style>
-	.mySwiper {
+	.mySwiper{
 		height: 700rpx;
+	}
+	.myImg{
+		height: 750rpx;
+		width: 750rpx;	
+	}
+	.my-label{
+		padding-bottom: 100rpx;
 	}
 </style>
