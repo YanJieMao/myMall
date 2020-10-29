@@ -1,11 +1,28 @@
 <template>
 	<view>
-		商品列表
+		<!-- 首页商品列表 -->
+		<view class="cu-bar search bg-white fixed">
+			<view class="search-form round">
+				<text class="cuIcon-search"></text>
+				<input v-model="params.query" :adjust-position="false" type="text" confirm-type="search"></input>
+			</view>
+			<view class="action">
+				<button class="cu-btn bg-gradual-pink shadow-blur round" @click="search">搜索</button>
+			</view>
+		</view>
+		<!-- 显示商品 -->		
 		<view class="grid col-2 margin-bottom text-center">
 			<view v-for="(item,index) in products" :key="item.id" class="bg-white padding">
 				<image :src="imgServer+item.image"></image>
 				<view class="text-price text-red">{{toDecimal2(item.price)}}</view>
 				<view class="text-df solid-bottom">{{item.name}}</view>
+			</view>
+			<view>
+				<button class="cu-btn round lg icon top topc" @click="top" 
+									:style="{'display':(flag===true? 'block':'none')}">
+					<text class="cuIcon-top"></text>
+				</button>
+									
 			</view>
 		</view>
 		
@@ -22,17 +39,26 @@
 					query:""
 				},
 				products:[],
-				imgServer:this.$global.imgServer
+				imgServer:this.$global.imgServer,
+				flag:false
 				
 			}
 		},
-		onReachBottom:function(){//下拉是触发刷新
+		onReachBottom:function(){//下拉到底部自动加载数据
 			this.params.pageNum++;
 			this.init();
 		},
 		onLoad:function(){
 			this.init();
 
+		},
+		onPageScroll:function(e){
+			console.log(e.scrollTop);
+			if(e.scrollTop>800){
+				this.flag = true;
+			}else{
+				this.flag = false;
+			}
 		},
 		methods: {
 			init:function(){//初始化页面
@@ -57,6 +83,17 @@
 					s += '0';
 				}
 				return s;
+			},
+			top:function(){
+				uni.pageScrollTo({
+					duration:350,
+					scrollTop:0
+				})
+			},
+			search:function(){
+				this.products = [];
+				this.params.pageNum = 1;
+				this.init();
 			}
 
 		}
@@ -64,5 +101,19 @@
 </script>
 
 <style>
+	/* 回到顶部 */
+	.top {
+		position: relative;
+		display: none;
+	}
+	
+	.topc {
+		position: fixed;
+		right: 0;
+		background: #ff5c7c;
+		top: 80%;
+		height: 50px;
+		line-height: 50px;
+	}
 	
 </style>
