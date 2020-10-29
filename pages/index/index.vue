@@ -13,17 +13,21 @@
 		<!-- 显示商品 -->		
 		<view class="grid col-2 margin-bottom text-center">
 			<view v-for="(item,index) in products" :key="item.id" class="bg-white padding">
+			 <navigator :url="'./detail?id='+item.spuId">
 				<image :src="imgServer+item.image"></image>
 				<view class="text-price text-red">{{toDecimal2(item.price)}}</view>
 				<view class="text-df solid-bottom">{{item.name}}</view>
+			</navigator>
 			</view>
-			<view>
-				<button class="cu-btn round lg icon top topc" @click="top" 
-									:style="{'display':(flag===true? 'block':'none')}">
-					<text class="cuIcon-top"></text>
-				</button>
-									
-			</view>
+			
+		</view>
+		<!-- 返回顶部按钮 -->
+		<view>
+			<button class="cu-btn round lg icon top topc" @click="top" 
+								:style="{'display':(flag===true? 'block':'none')}">
+				<text class="cuIcon-top"></text>
+			</button>
+								
 		</view>
 		
 	</view>
@@ -67,7 +71,15 @@
 						console.log(res);
 						console.log("啦啦啦啦啦");
 						console.log(res.list);
+					if(res.list.length == 0){
+						uni.showToast({
+							title:"没有更多商品信息",
+							duration: 3000
+						})
+					}
+					else{//有商品信息
 						this.products=this.products.concat(res.list);
+						}
 					
 					});
 			},
