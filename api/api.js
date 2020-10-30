@@ -28,5 +28,11 @@ export default{
 		return new http({
 			url:'spudetails/'+params.id
 		});
+	},
+	//获取商品分类
+	__api__getCategories:function(){
+		return new http({
+			url:'categories'
+		})
 	}
 }
