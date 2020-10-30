@@ -13,7 +13,7 @@
 		<!-- 显示商品 -->		
 		<view class="grid col-2 margin-bottom text-center">
 			<view v-for="(item,index) in products" :key="item.id" class="bg-white padding">
-			 <navigator :url="'./detail?id='+item.spuId">
+			 <navigator :url="'../index/detail?id='+item.spuId">
 				<image :src="imgServer+item.image"></image>
 				<view class="text-price text-red">{{toDecimal2(item.price)}}</view>
 				<view class="text-df solid-bottom">{{item.name}}</view>
