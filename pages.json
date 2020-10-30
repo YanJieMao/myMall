@@ -31,6 +31,15 @@
             "path" : "pages/index/detail",
             "style" : {}
         }
+        ,{
+            "path" : "pages/category/product",
+            "style" : {}
+        }
+		
+        ,{
+            "path" : "pages/category/datail",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

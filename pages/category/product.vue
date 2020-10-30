@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 搜索栏 -->
-		<view class="cu-bar search bg-white fixed">
+		<!-- <view class="cu-bar search bg-white fixed">
 			<view class="search-form round">
 				<text class="cuIcon-search"></text>
 				<input v-model="params.query" :adjust-position="false" type="text" confirm-type="search"></input>
@@ -9,7 +9,7 @@
 			<view class="action">
 				<button class="cu-btn bg-gradual-pink shadow-blur round" @click="search">搜索</button>
 			</view>
-		</view>
+		</view> -->
 		<!-- 显示商品 -->		
 		<view class="grid col-2 margin-bottom text-center">
 			<view v-for="(item,index) in products" :key="item.id" class="bg-white padding">
@@ -52,7 +52,8 @@
 			this.params.pageNum++;
 			this.init();
 		},
-		onLoad:function(){
+		onLoad:function(param){
+			this.params.cateId = param.id;
 			this.init();
 
 		},
@@ -66,7 +67,7 @@
 		},
 		methods: {
 			init:function(){//初始化页面
-				this.$api.__api__getSkus(this.params)
+				this.$api.__api__sku_page(this.params)
 					.then((res)=>{
 						console.log(res);
 						console.log("啦啦啦啦啦");

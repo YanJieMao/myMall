@@ -34,5 +34,13 @@ export default{
 		return new http({
 			url:'categories'
 		})
+	},
+	
+	//获取某个分类的商品
+	__api__sku_page:function(params){
+		return http({
+			url: 'sku-page',
+			data:params
+		});
 	}
 }

@@ -29,9 +29,12 @@
 					<!-- 三级分类 -->
 					<view class="cu-list menu-avatar" v-for="(item2,index2) in item.children" :key="index2">
 						<view class="cu-item" v-for="(item3,index3) in item2.children" :key="index3"> 
-							<view class="content">
-								<text class="text-gray">{{item3.name}}</text>
-							</view>
+							<navigator :url="'./product?id='+item3.id" >
+							  <view class="content">
+							  	<text class="text-gray">{{item3.name}}</text>
+							  </view>
+							</navigator>
+							
 							
 						</view>
 						
