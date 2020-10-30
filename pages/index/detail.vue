@@ -104,7 +104,6 @@
 			}
 		},
 		onLoad: function(data) {
-			console.log(data);
 			this.init(data.id);
 
 		},
@@ -113,7 +112,6 @@
 				this.$api.__api__getSkusDetails({
 					id: id
 				}).then((res) => {
-					console.log(res);
 					this.product = res;
 					this.skus_id = this.product.skus[this.curIndex].id;
 				})
@@ -144,7 +142,7 @@
 			ChooseCheckbox(e) {
 				this.curIndex = e.currentTarget.dataset.curindex;
 				this.skus_id = e.currentTarget.dataset.value;
-				console.log(this.curIndex);
+		
 
 			}
 

@@ -27,8 +27,9 @@ export function http(params){
 		    data: params.data || {},
 		    header: header,
 		    success: (res) => {
-		        console.log("发送网络请求成功结果："+JSON.stringify(res.data));
+		        //console.log("发送网络请求成功结果："+JSON.stringify(res.data));
 		        if(res.data.code==200||res.data.code==201){
+					console.log("请求成功");
 					resolve(res.data.data);
 				}else{
 					uni.showToast({
