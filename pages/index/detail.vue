@@ -10,8 +10,8 @@
 		<!-- 选项卡 -->
 		<scroll-view scroll-x class="bg-white nav">
 			<view class="flex text-center">
-				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" 
-				v-for="(item,index) in labels" :key="index" @tap="tabSelect" :data-id="index">
+				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in labels" :key="index"
+				 @tap="tabSelect" :data-id="index">
 					{{item}}
 				</view>
 			</view>
@@ -35,6 +35,20 @@
 				{{item.name}}:{{item.value}}
 			</view>
 		</view>
+		<!-- 产品规格 -->
+		<view v-if="TabCur == 2" class="my-label">
+			<view v-for="(item,index) in product.skus[0].specGroups" :key="index" class="solid padding-sm flex">
+				<view class="flex-sub">
+					{{item.group}}
+				</view>
+				<view class="flex-twice">
+					<view v-for="(item,index) in item.specsList" :key="index"  class="solid padding-sm">
+						{{item.name}}:{{item.value}}
+					</view>
+				</view>
+			</view>
+		</view>
+
 		<!-- 购物车栏 -->
 		<view class="cu-bar bg-white tabbar border shop foot">
 			<button class="action" open-type="contact">
@@ -65,9 +79,9 @@
 			return {
 				product: null, //商品详情信息
 				imgServer: this.$global.imgServer,
-				TabCur: 0,//当前选项卡
-				scrollLeft: 0,//偏移量
-				labels:["图文详情","商品介绍","规格详情","商品评价"]
+				TabCur: 0, //当前选项卡
+				scrollLeft: 0, //偏移量
+				labels: ["图文详情", "商品介绍", "规格详情", "商品评价"]
 
 			}
 		},
@@ -108,14 +122,16 @@
 </script>
 
 <style>
-	.mySwiper{
+	.mySwiper {
 		height: 700rpx;
 	}
-	.myImg{
+
+	.myImg {
 		height: 750rpx;
-		width: 750rpx;	
+		width: 750rpx;
 	}
-	.my-label{
+
+	.my-label {
 		padding-bottom: 100rpx;
 	}
 </style>
