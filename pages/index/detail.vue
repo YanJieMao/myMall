@@ -16,9 +16,18 @@
 				</view>
 			</view>
 		</scroll-view>
+		<!-- 商品名字和价格 -->
+		<view calss="solids-bottom padding-xs flex bg-white">
+			<view class="flex-sub">
+				<view class="solid-bottom text-xxl padding">
+					<text class="text-price text-red">{{toDecimal2(product.skus[0].price)}}</text>
+				</view>
+				<view class="padding">{{product.skus[0].name}}</view>
+			</view>
+		</view>
 		<!-- 图文详情 -->
 		<view v-if="TabCur == 0">
-			<image class="myImg" v-for="(item,index) in product.images" :key="index" :src="imgServer+item" mode="aspectFill"></image>
+			<image class="myImg" v-for="(item,index) in product.images" :key="index" :src="imgServer+item"  mode="widthFix"></image>
 		</view>
 		<!-- 商品详情 -->
 		<view v-if="TabCur == 1" class="grid col-2 my-label">
@@ -75,6 +84,19 @@
 					console.log(res);
 					this.product = res;
 				})
+			},
+			toDecimal2:function(x){
+				var f = Math.round(x) / 100;
+				var s = f.toString();
+				var rs = s.indexOf('.');
+				if (rs < 0) {
+					rs = s.length;
+					s += '.';
+				}
+				while (s.length <= rs + 2) {
+					s += '0';
+				}
+				return s;
 			},
 			tabSelect(e) {
 				this.TabCur = e.currentTarget.dataset.id;
