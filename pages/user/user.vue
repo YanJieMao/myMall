@@ -1,6 +1,6 @@
 <template>
 	<view>
-		个人中心
+		
 		<view class="cu-list grid col-3">
 			<view class="cu-item" >
 				<navigator url="./userInfo" open-type="navigate">
@@ -9,20 +9,20 @@
 				</navigator>
 			</view>
 			<view class="cu-item" >
-				<view class="cuIcon-people text-red"></view>
-				<text>个人信息</text>			
+				<view class="cuIcon-send text-red"></view>
+				<text>我的订单</text>			
 			</view>
 			<view class="cu-item" >
-				<view class="cuIcon-people text-red"></view>
-				<text>个人信息</text>			
+				<view class="cuIcon-favor text-red"></view>
+				<text>我的收藏</text>			
 			</view>
 			<view class="cu-item" >
-				<view class="cuIcon-people text-red"></view>
-				<text>个人信息</text>			
+				<view class="cuIcon-location text-red"></view>
+				<text>收获地址</text>			
 			</view>
 			<view class="cu-item" >
-				<view class="cuIcon-people text-red"></view>
-				<text>个人信息</text>			
+				<view class="cuIcon-pay text-red"></view>
+				<text>钱包</text>			
 			</view>
 			<view class="cu-item" >
 				<view class="cuIcon-exit text-red" @click="logout()"></view>
