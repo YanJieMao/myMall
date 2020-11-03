@@ -38,7 +38,7 @@
 
 
 
-  分类页面(`可跳转相应页面`)	 个人信息
+> 分类页面	 个人信息
 <img src="img/image-20201031225448138.png" alt="image-20201031225448138"  width="30%" style="zoom:50%;" /><img src="img/image-20201031225507274.png" alt="image-20201031225507274"  width="30%" style="zoom:50%;" /><img src="img/image-20201031225622140.png" alt="image-20201031225622140"  width="30%" style="zoom:50%;" />
 
 
