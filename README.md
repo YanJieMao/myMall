@@ -7,7 +7,7 @@
 
 > 下边是具体的功能实现的截图
 
-   				登录																退出登录
+   				登录		退出登录
 
 <img src="img/image-20201031225545662.png" alt="image-20201031225545662" width="30%" style="zoom:50%;" /> <img src="img/image-20201031225650115.png" alt="image-20201031225650115" style="zoom:50%;" width="30%" />
 
