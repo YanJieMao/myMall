@@ -33,7 +33,7 @@
 
 > 商品详情
 
-<img src="img/image-20201031224847523.png" alt="image-20201031224847523"  width="30%"  style="zoom:50%;" /><img src="img/image-20201031224915129.png" alt="image-20201031224915129" width="30%"  style="zoom:50%;" /><img src="img/image-20201031224941556.png" alt="image-20201031224941556" width="30%" style="zoom:50%;" /><img src="img/image-20201031225143999.png" alt="image-20201031225143999" style="zoom:50%;" /><img src="img/image-20201031225223781.png" alt="image-20201031225223781" width="30%" style="zoom:50%;" /><img src="img/image-20201031225246513.png" alt="image-20201031225246513" width="30%" style="zoom:50%;" />
+<img src="img/image-20201031224847523.png" alt="image-20201031224847523"  width="30%"  style="zoom:50%;" /><img src="img/image-20201031224915129.png" alt="image-20201031224915129" width="30%"  style="zoom:50%;" /><img src="img/image-20201031224941556.png" alt="image-20201031224941556" width="30%" style="zoom:50%;" /><img src="img/image-20201031225143999.png" alt="image-20201031225143999" width="30%" style="zoom:50%;" /><img src="img/image-20201031225223781.png" alt="image-20201031225223781" width="30%" style="zoom:50%;" /><img src="img/image-20201031225246513.png" alt="image-20201031225246513" width="30%" style="zoom:50%;" />
 
 
 
