@@ -7,7 +7,7 @@
 
 > 下边是具体的功能实现的截图
 
-   				登录																退出登录
+   				登录							退出登录
 
 <img src="img/image-20201031225545662.png" alt="image-20201031225545662" width="30%" style="zoom:50%;" /> <img src="img/image-20201031225650115.png" alt="image-20201031225650115" style="zoom:50%;" width="30%" />
 
@@ -18,11 +18,6 @@
 ​							首页												 在首页搜索电脑								在首页搜索拖把
 
 <img src="img/image-20201031224019052.png" alt="image-20201031224019052" style="zoom: 50%;" width="30%"/><img src="img/image-20201031224300978.png" alt="image-20201031224300978" style="zoom:50%;" width="30%" /><img src="img/image-20201031224541498.png" alt="image-20201031224541498" width="30%" style="zoom:50%;" />
-
-
-
-
-
 
 
 
