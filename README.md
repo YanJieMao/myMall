@@ -7,7 +7,7 @@
 
 > 下边是具体的功能实现的截图
 
-   				登录							退出登录
+   				登录																退出登录
 
 <img src="img/image-20201031225545662.png" alt="image-20201031225545662" width="30%" style="zoom:50%;" /> <img src="img/image-20201031225650115.png" alt="image-20201031225650115" style="zoom:50%;" width="30%" />
 
@@ -26,6 +26,11 @@
 
 
 
+
+
+
+
+
 > 商品详情
 
 <img src="img/image-20201031224847523.png" alt="image-20201031224847523"  width="30%"  style="zoom:50%;" /><img src="img/image-20201031224915129.png" alt="image-20201031224915129" width="30%"  style="zoom:50%;" /><img src="img/image-20201031224941556.png" alt="image-20201031224941556" width="30%" style="zoom:50%;" /><img src="img/image-20201031225143999.png" alt="image-20201031225143999" style="zoom:50%;" /><img src="img/image-20201031225223781.png" alt="image-20201031225223781" width="30%" style="zoom:50%;" /><img src="img/image-20201031225246513.png" alt="image-20201031225246513" width="30%" style="zoom:50%;" />
@@ -35,8 +40,6 @@
 
   分类页面(`可跳转相应页面`)																  个人信息
 <img src="img/image-20201031225448138.png" alt="image-20201031225448138"  width="30%" style="zoom:50%;" /><img src="img/image-20201031225507274.png" alt="image-20201031225507274"  width="30%" style="zoom:50%;" /><img src="img/image-20201031225622140.png" alt="image-20201031225622140"  width="30%" style="zoom:50%;" />
-
-
 
 
 
